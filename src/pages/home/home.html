@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-input type="text" [(ngModel)]="fPeerId"></ion-input>
+
+
+    <div *ngFor="let message of messages">
+      {{message}}
+    </div>
+
+
+</ion-content>
+<ion-footer>
+  <ion-item>
+    <ion-input type="text" placeholder="Mensaje" [(ngModel)]="message.text"></ion-input>
+    <button ion-button icon-only item-end clear (click)="sendMessage()"><ion-icon name="send"></ion-icon></button>
+  </ion-item>
+
+</ion-footer>
